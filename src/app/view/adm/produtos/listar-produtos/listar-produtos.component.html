@@ -1,0 +1,27 @@
+<div class="table-wrapper">
+  <button mat-raised-button color="primary" (click)="adicionarProduto()">Adicionar</button>
+  <table mat-table [dataSource]="produtos" class="table-produtos">
+    <!-- Coluna do nome do produto -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Produto </th>
+      <td mat-cell *matCellDef="let produto"> {{ produto.nome }} </td>
+    </ng-container>
+
+    <!-- Coluna dos botões de ação -->
+    <ng-container matColumnDef="acoes">
+      <th mat-header-cell *matHeaderCellDef> Ações </th>
+      <td mat-cell *matCellDef="let produto" class="acao-cell">
+        <button mat-icon-button color="primary" (click)="editarProduto(produto)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="excluirProduto(produto)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <!-- Adiciona as colunas na tabela -->
+    <tr mat-header-row *matHeaderRowDef="colunas"></tr>
+    <tr mat-row *matRowDef="let row; columns: colunas;"></tr>
+  </table>
+</div>

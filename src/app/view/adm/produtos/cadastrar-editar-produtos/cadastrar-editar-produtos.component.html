@@ -1,0 +1,43 @@
+<div class="content-container">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>{{cabecalho}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <mat-form-field class="form-field-wrapper">
+          <mat-label>Nome</mat-label>
+          <input matInput [(ngModel)]="produto.nome" name="nome" placeholder="Caneca 500ml">
+        </mat-form-field>
+
+        <mat-form-field class="form-field-wrapper">
+          <mat-label>Preço</mat-label>
+          <input matInput [(ngModel)]="produto.preco" name="preco" placeholder="R$40,00">
+        </mat-form-field>
+
+        <mat-form-field class="form-field-wrapper">
+          <mat-label>Preço Associado</mat-label>
+          <input matInput [(ngModel)]="produto.precoAssociado" name="precoAssociado" placeholder="R$30,00">
+        </mat-form-field>
+
+        <div class="form-field-wrapper">
+          <mat-checkbox [(ngModel)]="produto.disponivel" name="disponivel">Disponível</mat-checkbox>
+        </div>
+
+        <div class="container">
+          <div *ngIf="produto.imagem">
+            <img height="100px" [src]="produto.imagem" name="imagem" alt="Imagem">
+          </div>
+          <label mat-raised-button for="inputImagem" class="mat-button button-hover">
+            <mat-icon>attach_file</mat-icon>
+            <span>Selecione uma imagem</span>
+          </label>
+          <input id="inputImagem" type="file" accept="image/*" (change)="selectImagem64($event)" style="display:none;">
+        </div>
+        <mat-card-actions align="end">
+          <button mat-raised-button color="primary" type="submit" (click)="onSubmit()">Salvar</button>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

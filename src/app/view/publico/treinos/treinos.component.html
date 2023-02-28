@@ -1,0 +1,15 @@
+<h1>Treinos</h1>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <div *ngFor="let treino of this.treinos; let i = index">
+    <mat-grid-tile>
+      <mat-card>
+        <img class="imagem" mat-card-image [src]="treino.imagem">
+        <mat-card-content class="card">
+          <p>Nome: {{treino.nome}}</p>
+          <p>Data: {{treino.data}}</p>
+          <p>Local: {{treino.local}}</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>

@@ -1,0 +1,15 @@
+.card {
+  width: 500px;
+}
+
+.imagem {
+  width: 100px;
+  margin-left: 216px;
+  margin-top: 15px;
+  border: 5px solid white;
+  border-radius: 10% !important;
+}
+
+mat-card-title {
+  background: #1f1d1d;
+}

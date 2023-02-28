@@ -1,0 +1,27 @@
+<div class="table-wrapper">
+  <button mat-raised-button color="primary" (click)="adicionarMembro()">Adicionar</button>
+  <table mat-table [dataSource]="membros" class="table-membros">
+    <!-- Coluna do nome do membro -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Membro </th>
+      <td mat-cell *matCellDef="let membro"> {{ membro.nome }} </td>
+    </ng-container>
+
+    <!-- Coluna dos botões de ação -->
+    <ng-container matColumnDef="acoes">
+      <th mat-header-cell *matHeaderCellDef> Ações </th>
+      <td mat-cell *matCellDef="let membro" class="acao-cell">
+        <button mat-icon-button color="primary" (click)="editarMembro(membro)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="excluirMembro(membro)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <!-- Adiciona as colunas na tabela -->
+    <tr mat-header-row *matHeaderRowDef="colunas"></tr>
+    <tr mat-row *matRowDef="let row; columns: colunas;"></tr>
+  </table>
+</div>

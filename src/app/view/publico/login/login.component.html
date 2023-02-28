@@ -1,0 +1,24 @@
+<div class="mat-card">
+  <mat-card>
+    <mat-card-header>
+      <div class="titulo">
+        <mat-card-title>Login</mat-card-title>
+      </div>
+    </mat-card-header>
+    <mat-card-content class="content-container">
+      <form>
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Entre com seu email</mat-label>
+          <input matInput placeholder="imperial@example.com" [(ngModel)]="email" name="email">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Entre com sua senha</mat-label>
+          <input matInput type="password" [(ngModel)]="senha" name="senha">
+        </mat-form-field>
+        <div class="button-container">
+          <button mat-raised-button color="accent" (click)="login()">Entrar</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

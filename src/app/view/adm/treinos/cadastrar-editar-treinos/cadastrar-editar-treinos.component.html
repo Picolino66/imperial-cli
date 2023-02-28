@@ -1,0 +1,34 @@
+<div class="content-container">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>{{cabecalho}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <mat-form-field class="form-field-wrapper">
+          <mat-label>Nome</mat-label>
+          <input matInput [(ngModel)]="treino.nome" name="nome" placeholder="Basquete">
+        </mat-form-field>
+
+        <mat-form-field class="form-field-wrapper">
+          <mat-label>Dia e Horário</mat-label>
+          <input matInput [(ngModel)]="treino.data" name="data" placeholder="Segunda-Feira - 10:00">
+        </mat-form-field>
+
+        <mat-form-field class="form-field-wrapper">
+          <mat-label>Local</mat-label>
+          <input matInput [(ngModel)]="treino.local" name="local" placeholder="Quadra Abera - Selti">
+        </mat-form-field>
+        <div class="container">
+          <div *ngIf="treino.imagem">
+            <img height="100px" [src]="treino.imagem" name="imagem" alt="Imagem">
+          </div>
+          <input type="file" accept="image/*" (change)="selectImagem64($event)">
+        </div>
+        <mat-card-actions align="end">
+        <button mat-raised-button color="primary" type="submit" (click)="onSubmit()">Salvar</button>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,19 @@
+.card {
+  width: 500px;
+}
+
+.form-field-wrapper {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}

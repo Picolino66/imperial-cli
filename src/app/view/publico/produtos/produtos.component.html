@@ -1,0 +1,27 @@
+<h1>Produtos</h1>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <div *ngFor="let produto of this.produtos; let i = index">
+    <mat-grid-tile>
+      <mat-card>
+        <img class="imagem" mat-card-image [src]="produto.imagem">
+        <mat-card-content class="card">
+          <p>Nome: {{produto.nome}}</p>
+          <p>Preco: {{produto.preco}}</p>
+          <p>Preço Associado: {{produto.precoAssociado}}</p>
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <span *ngIf="produto.disponivel">
+              <button mat-raised-button color="primary"(click)="abrirWhatsApp()">
+                Comprar
+              </button>
+            </span>
+            <span *ngIf="!produto.disponivel">
+              <button mat-raised-button color="primary"(click)="abrirWhatsApp()" disabled>
+                Indisponível
+              </button>
+            </span>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>

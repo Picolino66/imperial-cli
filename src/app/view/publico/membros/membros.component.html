@@ -1,0 +1,18 @@
+<h1>Membros</h1>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <div *ngFor="let membro of this.membros; let i = index">
+    <mat-grid-tile>
+      <mat-card>
+        <mat-card-title>
+          <img class="imagem" mat-card-image [src]="membro.imagem">
+        </mat-card-title>
+        <mat-card-content class="card">
+          <p>Nome: {{membro.nome}}</p>
+          <p>Cargo: {{membro.cargo}}</p>
+          <p>Idade: {{membro.idade}}</p>
+          <p>Curso: {{membro.curso}}</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>

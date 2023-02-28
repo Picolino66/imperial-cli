@@ -1,0 +1,20 @@
+.mat-card-full {
+  width: 50%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.mat-card-full:hover {
+  cursor: pointer;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.texto-centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  line-height: 100px;
+}

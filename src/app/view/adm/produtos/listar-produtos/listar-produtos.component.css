@@ -1,0 +1,12 @@
+.table-treinos {
+  width: 90%;
+  min-width: 50% !important;
+}
+
+.acao-cell {
+  width: 150px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
