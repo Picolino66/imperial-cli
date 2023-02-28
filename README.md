@@ -12,5 +12,9 @@ Angular CLI: 10.0.5
 Para instalar as dependências:
 npm install
 
+## Configuração
+No arquivo environment.ts (src/environments/environment.ts)
+Está a url para a nossa api.
+
 ## Inicialização
 ng serve
